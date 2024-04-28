@@ -2,10 +2,12 @@ package com.cliff.rpc.proxy;
 
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;
+import com.cliff.rpc.RpcApplication;
 import com.cliff.rpc.model.RpcRequest;
 import com.cliff.rpc.model.RpcResponse;
 import com.cliff.rpc.serializer.JdkSerializer;
 import com.cliff.rpc.serializer.Serializer;
+import com.cliff.rpc.serializer.SerializerFactory;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationHandler;
@@ -27,7 +29,7 @@ public class ServiceProxy implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         // 指定序列化器
-        Serializer serializer = new JdkSerializer();
+        Serializer serializer = SerializerFactory.getInstance(RpcApplication.getRpcConfig().getSerializer());
 
         // 构造请求
         RpcRequest rpcRequest = RpcRequest.builder()

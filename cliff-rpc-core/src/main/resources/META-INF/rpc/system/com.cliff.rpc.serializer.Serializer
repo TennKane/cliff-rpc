@@ -1,0 +1,4 @@
+jdk=com.cliff.rpc.serializer.JdkSerializer
+hessian=com.cliff.rpc.serializer.HessianSerializer
+json=com.cliff.rpc.serializer.JsonSerializer
+kryo=com.cliff.rpc.serializer.KryoSerializer
