@@ -1,0 +1,1 @@
+etcd = com.cliff.registry.EtcdRegistry

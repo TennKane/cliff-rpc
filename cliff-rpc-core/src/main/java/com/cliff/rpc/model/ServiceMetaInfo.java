@@ -1,8 +1,12 @@
 package com.cliff.rpc.model;
 
+import cn.hutool.core.util.StrUtil;
+import lombok.Data;
+
 /**
  * @Author: TravisKey
  */
+@Data
 public class ServiceMetaInfo {
     private String serviceName;
 
@@ -25,4 +29,10 @@ public class ServiceMetaInfo {
         return String.format("%s/%s:%s",getServiceKey(),serviceHost,servicePort);
     }
 
+    public String getServiceAddress(){
+        if(!StrUtil.contains(serviceHost,"http")){
+            return String.format("http://%s:%s",serviceHost,servicePort);
+        }
+        return String.format("%s:%s",serviceHost,servicePort);
+    }
 }

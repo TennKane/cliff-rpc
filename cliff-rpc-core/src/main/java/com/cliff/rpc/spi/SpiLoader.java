@@ -38,6 +38,11 @@ public class SpiLoader {
     private static final String RPC_SYSTEM_SPI_DIR = "META-INF/rpc/system/";
 
     /**
+     * 系统 SPI 目录
+     */
+    private static final String REGISTRY_SYSTEM_SPI_DIR = "META-INF/registry/system/";
+
+    /**
      * 用户自定义 SPI 目录
      */
     private static final String RPC_CUSTOM_SPI_DIR = "META-INF/rpc/custom/";
@@ -45,7 +50,7 @@ public class SpiLoader {
     /**
      * 扫描路径
      */
-    private static final String[] SCAN_DIRS = new String[]{RPC_SYSTEM_SPI_DIR, RPC_CUSTOM_SPI_DIR};
+    private static final String[] SCAN_DIRS = new String[]{RPC_SYSTEM_SPI_DIR, RPC_CUSTOM_SPI_DIR,REGISTRY_SYSTEM_SPI_DIR};
 
     /**
      * 动态加载的类列表
