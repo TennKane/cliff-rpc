@@ -26,6 +26,8 @@ public class RpcApplication {
         registry.init(registryConfig);
 
         log.info("rpc init config = {}",newRpcConfig.toString());
+
+        Runtime.getRuntime().addShutdownHook(new Thread(registry::destroy));
     }
 
     public static void init(){
