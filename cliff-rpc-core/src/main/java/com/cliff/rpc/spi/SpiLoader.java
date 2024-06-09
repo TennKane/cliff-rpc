@@ -122,6 +122,7 @@ public class SpiLoader {
                     }
                 } catch (Exception e) {
                     log.error("spi resource load error", e);
+
                 }
             }
         }
