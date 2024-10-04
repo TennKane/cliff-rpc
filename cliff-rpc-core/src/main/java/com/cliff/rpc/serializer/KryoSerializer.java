@@ -8,7 +8,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 
 /**
- * @Author: TravisKey
+ * @Author: TeenKane
  */
 public class KryoSerializer implements Serializer{
     /**

@@ -3,7 +3,7 @@ package com.cliff.rpc.config;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.setting.dialect.Props;
 /**
- * @Author: TravisKey
+ * @Author: TeenKane
  */
 public class ConfigUtil {
 

@@ -1,7 +1,7 @@
 package com.cliff.rpc.constant;
 
 /**
- * @Author: TravisKey
+ * @Author: TeenKane
  */
 public interface RpcConstant {
     String DEFAULT_CONFIG_PREFIX = "rpc";

@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Author: TravisKey
+ * @Author: TeenKane
  */
 public class SerializerFactory {
 

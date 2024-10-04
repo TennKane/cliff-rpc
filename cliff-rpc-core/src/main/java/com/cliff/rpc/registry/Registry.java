@@ -6,7 +6,7 @@ import com.cliff.rpc.model.ServiceMetaInfo;
 import java.util.List;
 
 /**
- * @Author: TravisKey
+ * @Author: TeenKane
  */
 public interface Registry {
     /**
@@ -22,8 +22,15 @@ public interface Registry {
      */
     void register(ServiceMetaInfo serviceMetaInfo) throws Exception;
 
+    /**
+     * 心跳检测
+     */
     void heartBeat();
 
+    /**
+     * 监听（消费端使用）
+     */
+    void watch(String serviceNodekey);
     /**
      * 注销服务
      * @param serviceMetaInfo
@@ -41,4 +48,7 @@ public interface Registry {
      * 服务销毁
      */
     void destroy();
+
+
+
 }

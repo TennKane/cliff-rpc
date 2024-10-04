@@ -4,7 +4,7 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 /**
- * @Author: TravisKey
+ * @Author: TeenKane
  */
 public class MockServiceProxy implements InvocationHandler {
     @Override

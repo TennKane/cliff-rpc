@@ -12,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.ServiceLoader;
 
 /**
- * @Author: TravisKey
+ * @Author: TeenKane
  */
 @Slf4j
 public class RpcApplication {
@@ -27,6 +27,7 @@ public class RpcApplication {
 
         log.info("rpc init config = {}",newRpcConfig.toString());
 
+        //JVM提供的机制，在JVM即将关闭之前执行一些清理工作或其他必要操作
         Runtime.getRuntime().addShutdownHook(new Thread(registry::destroy));
     }
 
@@ -50,6 +51,7 @@ public class RpcApplication {
         }
 
         return rpcConfig;
+
     }
 
 }

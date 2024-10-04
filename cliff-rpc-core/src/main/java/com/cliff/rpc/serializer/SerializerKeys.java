@@ -1,7 +1,7 @@
 package com.cliff.rpc.serializer;
 
 /**
- * @Author: TravisKey
+ * @Author: TeenKane
  */
 public interface SerializerKeys {
     String JDK = "jdk";

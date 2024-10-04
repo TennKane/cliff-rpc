@@ -4,7 +4,7 @@ import cn.hutool.core.util.StrUtil;
 import lombok.Data;
 
 /**
- * @Author: TravisKey
+ * @Author: TeenKane
  */
 @Data
 public class ServiceMetaInfo {
