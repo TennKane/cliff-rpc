@@ -6,6 +6,7 @@ import com.cliff.rpc.config.RpcConfig;
 import com.cliff.rpc.model.ServiceMetaInfo;
 import com.cliff.rpc.registry.Registry;
 import com.cliff.rpc.registry.RegistryFactory;
+import com.cliff.rpc.server.tcp.VertxTcpServer;
 import com.cliffi.example.common.service.UserService;
 import com.cliff.rpc.registry.LocalRegistry;
 import com.cliff.rpc.server.HttpServer;
@@ -37,7 +38,7 @@ public class EasyProviderExample {
             throw new RuntimeException(e);
         }
         // 启动 web 服务
-        HttpServer httpServer = new VertxHttpServer();
-        httpServer.doStart(RpcApplication.getRpcConfig().getServerPort());
+        VertxTcpServer vertxTcpServer = new VertxTcpServer();
+        vertxTcpServer.doStart(RpcApplication.getRpcConfig().getServerPort());
     }
 }
